@@ -1,0 +1,31 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+dist/
+
+# Build output
+build/
+cache/
+coverage/
+
+# Misc
+.DS_Store
+.env
+.env.local
+.env.*.local
+.project
+.idea/
+.vscode/
+*.swp
+
+# Remove old project-zip builds (se tiver)
+project-zip/.next/
+project-zip/out/
+project-zip/node_modules/
