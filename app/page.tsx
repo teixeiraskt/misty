@@ -142,7 +142,7 @@ const ProfileSection = () => {
       {/* Social Links */}
       <div className="flex items-center gap-2 mb-6 pl-4">
         <a
-          href="https://www.instagram.com/mieduarda02?igsh=NTRhNHNtMng4dzJ3"
+          href="https://www.instagram.com/mafe.pessoal?igsh=MTkwdzRvOXZwMWc5ZQ=="
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-3 py-1 border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-100 transition-colors"
