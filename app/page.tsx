@@ -49,7 +49,7 @@ const ProfileSection = () => {
     <div className="mb-8">
       {/* Cover Image */}
       <div className="relative rounded-xl overflow-hidden mb-8">
-        <img src="/nova_capa.png" alt="Cover" className="w-full h-full object-contain" />
+        <img src="/capa misty.png" alt="Cover" className="w-full h-full object-contain" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 
         {/* Stats overlay */}
@@ -101,7 +101,7 @@ const ProfileSection = () => {
       {/* Profile Picture */}
       <div className="flex items-center gap-4 mb-2 -mt-12">
         <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-pink-500 ring-offset-2">
-          <img src="/Screenshot_20250614_002901_Instagram.jpg" alt="Profile" className="w-full h-full object-cover" />
+          <img src="/WhatsApp Image 2025-06-14 at 02.30.29.jpeg" alt="Profile" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/10" />
         </div>
       </div>
@@ -142,7 +142,7 @@ const ProfileSection = () => {
       {/* Social Links */}
       <div className="flex items-center gap-2 mb-6 pl-4">
         <a
-          href="https://www.instagram.com/mafe.pessoal?igsh=aG9lODdzbjNwcDJi"
+          href="https://www.instagram.com/mieduarda02?igsh=NTRhNHNtMng4dzJ3"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-3 py-1 border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-100 transition-colors"
@@ -168,7 +168,7 @@ const ProfileSection = () => {
           <span>Instagram</span>
         </a>
         <a
-          href="https://t.me/mafe.pessoal"
+          href="https://t.me/mafeofc"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-3 py-1 border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-100 transition-colors"
@@ -493,7 +493,7 @@ const MainContent = () => {
           <div className="p-4 border rounded-lg shadow-sm bg-white">
             <div className="flex items-start space-x-3 mb-3">
               <img
-                src="/Screenshot_20250614_002901_Instagram.jpg"
+                src="/WhatsApp Image 2025-06-14 at 02.30.29.jpeg"
                 alt="Profile"
                 className="w-10 h-10 rounded-full object-cover flex-shrink-0"
               />
@@ -507,7 +507,7 @@ const MainContent = () => {
             </div>
 
             <p className="text-gray-700 text-sm mb-4">
-              Sozinha... mas nem por isso quietinha 😏 Me explorei todinha pensando em você 💦👅
+              Sim, eu gozei sozinha. Sem ninguém. Só meus dedos… e aquela fantasia suja na cabeça. Gravei tudo. E sim, você vai querer ver. 💦 👉 Tá no link, se tiver coragem
             </p>
 
             <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-900">
@@ -550,7 +550,7 @@ const MainContent = () => {
           <div className="p-4 border rounded-lg shadow-sm bg-white">
             <div className="flex items-start space-x-3 mb-3">
               <img
-                src="/Screenshot_20250614_002901_Instagram.jpg"
+                src="/WhatsApp Image 2025-06-14 at 02.30.29.jpeg"
                 alt="Profile"
                 className="w-10 h-10 rounded-full object-cover flex-shrink-0"
               />
@@ -564,7 +564,7 @@ const MainContent = () => {
             </div>
 
             <p className="text-gray-700 text-sm mb-4">
-              Entre pensamentos e gemidos baixos… eu me encontrei. E, claro, só dava você na minha cabeça 😈
+              Tava escuro… eu tava com tesão… Me toquei até minha perna tremer. Fiz barulho. E filmei tudo. Só pra você me imaginar de novo depois. 🔥
             </p>
 
             <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-900">
