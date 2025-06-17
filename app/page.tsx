@@ -322,7 +322,7 @@ const monthlyPlan = {
     reopening: "Depois disso, só na próxima reabertura.",
   },
   mainButtonText: "ASSINAR AGORA!",
-  mainButtonLink: "https://go.tribopay.com.br/3fh9thmn0p",
+  mainButtonLink: "https://go.tribopay.com.br/dq34sr3lfy",
   secondaryCTAText: "Ainda não quer o plano mensal?",
   secondaryCTALinkText: "Teste 24h por apenas R$10,90",
   secondaryCTALinkHref: "#",
@@ -332,7 +332,7 @@ const quarterlyPlan = {
   title: "ACESSO VIP IMEDIATO - 3 MESES",
   description: "Você está um passo da felicidade! 😍🥵",
   originalPrice: "150,00",
-  discountPrice: "98,70",
+  discountPrice: "99,60",
   includesList: [
     "Acesso 3 meses +1884 vídeos/fotos",
     "Realizo todos fetiches seu",
@@ -346,7 +346,7 @@ const quarterlyPlan = {
     reopening: "Depois disso, só na próxima reabertura.",
   },
   mainButtonText: "ASSINAR AGORA!",
-  mainButtonLink: "https://go.tribopay.com.br/toarzed1ec",
+  mainButtonLink: "https://go.tribopay.com.br/9sgmmahoya",
   secondaryCTAText: "Ainda não quer o plano trimestral?",
   secondaryCTALinkText: "Teste 24h por apenas R$10,90",
   secondaryCTALinkHref: "#",
@@ -356,7 +356,7 @@ const lifetimePlan = {
   title: "ACESSO VIP IMEDIATO - VITALÍCIO",
   description: "Você está um passo da felicidade! 😍🥵",
   originalPrice: "297,00",
-  discountPrice: "179,90",
+  discountPrice: "185,60",
   includesList: [
     "acesso VITALÍCIO +1884 vídeos/fotos",
     "realizo TODOS seus fetiches seu",
@@ -371,7 +371,7 @@ const lifetimePlan = {
     reopening: "Depois disso, só na próxima reabertura.",
   },
   mainButtonText: "ASSINAR AGORA!",
-  mainButtonLink: "https://go.tribopay.com.br/tptekilkcl",
+  mainButtonLink: "https://go.tribopay.com.br/bqx0ihyttd",
   secondaryCTAText: "Ainda não quer o plano vitalício?",
   secondaryCTALinkText: "Teste 24h por apenas R$10,90",
   secondaryCTALinkHref: "#",
@@ -452,14 +452,14 @@ const MainContent = () => {
 
       <SubscriptionButton
         duration="3 meses ( 15% off )"
-        price="R$ 98,70"
+        price="R$ 99,60"
         onClick={() => openModal(quarterlyPlan)}
         isDiscounted={true}
       />
 
       <SubscriptionButton
         duration="Vitalício ( 15% off )"
-        price="R$ 179,90"
+        price="R$ 185,60"
         onClick={() => openModal(lifetimePlan)}
         isDiscounted={true}
       />
