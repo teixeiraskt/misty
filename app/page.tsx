@@ -42,7 +42,7 @@ const ProfileSection = () => {
   const [showFullBio, setShowFullBio] = useState(false)
 
   const fullBio =
-    "PUTA CHEFE NÉ BEBÊ? Sou a Nanda... se você caiu aqui não foi pro acaso, eu sei oque você quer! oque acha depois de adquirir me chamar no wpp para ver onde nossa imaginação ira nos levar? 🥵 Os vídeos contém sexo explícito mostrando tudo, vídeo mamando, se masturbando e tudo mais que você pode imaginar! Aqui tem de tudo!!! NOVINHA DO BUCETÃO 😛😋 BUCETINHA TÃO GOSTOSA E NOVINHA QUE NEM PARECE QUE JÁ FOI USADA!!😋🔥 AQUI TAMBÉM TEM MUITO CHAT PRIVADO COM FOTOS E VÍDEOS EXCLUSIVOS QUE MANDO PRA VOCÊ, COMO VOCÊ PEDIR 👅🔞🍆 E REALIZO FETICHES A LONGA DISTÂNCIA 😍"
+    "Sou a Nanda, sua NOVINHA PRIVADA 👀 se caiu aqui, é pq tua mente é suja igual a minha. 😏Gravo vídeos me tocando, gemendo, gozada REAL... 📸 Packs? Sim. Vídeos mamando? Claro. 🎧 Áudios sussurrando seu nome? Só me pedir… depois de adquirir me chama no Whats, eu respondo pelada. 🔓 Chat + conteúdo EXCLUSIVO + fetiche sob medida 🖤 Aqui, fantasia vira realidade (e gozada também) 👉 Clica nos destaques e entra no meu mundinho 🔥"
   const shortBio = fullBio.substring(0, fullBio.length / 2) + "..."
 
   return (
@@ -63,28 +63,28 @@ const ProfileSection = () => {
                 <Camera className="w-3 h-3 mb-1 opacity-70" />
                 <span className="mx-1">•</span>
               </div>
-              <span className="font-bold text-xs">729</span>
+              <span className="font-bold text-xs">812</span>
             </div>
             <div className="flex flex-col items-center">
               <div className="flex items-center">
                 <ImageIcon className="w-3 h-3 mb-1 opacity-70" />
                 <span className="mx-1">•</span>
               </div>
-              <span className="font-bold text-xs">1,2k</span>
+              <span className="font-bold text-xs">1,3k</span>
             </div>
             <div className="flex flex-col items-center">
               <div className="flex items-center">
                 <Users className="w-3 h-3 mb-1 opacity-70" />
                 <span className="mx-1">•</span>
               </div>
-              <span className="font-bold text-xs">3,2k</span>
+              <span className="font-bold text-xs">3,7k</span>
             </div>
             <div className="flex flex-col items-center">
               <div className="flex items-center">
                 <Heart className="w-3 h-3 mb-1 opacity-70" />
                 <span className="mx-1">•</span>
               </div>
-              <span className="font-bold text-xs">28k</span>
+              <span className="font-bold text-xs">31k</span>
             </div>
           </div>
         </div>
@@ -136,7 +136,7 @@ const ProfileSection = () => {
       <div className="flex items-center gap-1 text-sm text-gray-500 mb-4 pl-4">
         {" "}
         <MapPin className="w-4 h-4 opacity-70" />
-        <span>Foz do Iguaçu/RJ</span>
+        <span>Porto Alegre/RS</span>
       </div>
 
       {/* Social Links */}
@@ -472,7 +472,7 @@ const MainContent = () => {
             onClick={() => setActiveTab("feed")}
           >
             <span className={`${activeTab === "feed" ? "text-orange-500 font-medium" : "text-gray-500"}`}>
-              2012 postagens
+              2235 postagens
             </span>
           </button>
           <button
@@ -480,7 +480,7 @@ const MainContent = () => {
             onClick={() => setActiveTab("media")}
           >
             <span className={`${activeTab === "media" ? "text-orange-500 font-medium" : "text-gray-500"}`}>
-              1929 mídias
+              2112 mídias
             </span>
           </button>
         </div>
@@ -612,15 +612,15 @@ const MainContent = () => {
           <div className="flex justify-center items-center space-x-4 mb-4 text-gray-600">
             <button className="flex items-center text-sm p-2 rounded-lg bg-gray-100 hover:bg-gray-200">
               <ImageIcon size={16} className="mr-1.5" />
-              <span>1,2k</span>
+              <span>1,3k</span>
             </button>
             <button className="flex items-center text-sm p-2 rounded-lg bg-gray-100 hover:bg-gray-200">
               <Video size={16} className="mr-1.5" />
-              <span>729</span>
+              <span>812</span>
             </button>
             <button className="flex items-center text-sm p-2 rounded-lg bg-gray-100 hover:bg-gray-200">
               <Heart size={16} className="mr-1.5" />
-              <span>28k</span>
+              <span>31k</span>
             </button>
           </div>
 
