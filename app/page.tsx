@@ -24,6 +24,7 @@ import {
   FileText,
   CreditCard,
   Shield,
+  Play,
 } from "lucide-react"
 
 // Header Component
@@ -182,15 +183,100 @@ const ProfileSection = () => {
 }
 
 // Blurred Media Component (todas as fotos com blur)
-const BlurredMedia = ({ imageUrl }: { imageUrl: string }) => (
+const BlurredMedia = ({ imageUrl, isVideo = false }: { imageUrl: string; isVideo?: boolean }) => (
   <div className="aspect-square bg-gray-200 rounded-lg overflow-hidden relative">
-    <img 
-      src={imageUrl} 
-      alt="Media" 
-      className="w-full h-full object-cover filter blur-md" 
-    />
-    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-      <Lock size={32} className="text-white opacity-70" />
+    {isVideo ? (
+      <>
+        <video 
+          src={imageUrl} 
+          className="w-full h-full object-cover filter blur-md" 
+          muted
+          playsInline
+        />
+        <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+          <div className="flex flex-col items-center">
+            <Play size={24} className="text-white opacity-70 mb-1" />
+            <Lock size={20} className="text-white opacity-70" />
+          </div>
+        </div>
+      </>
+    ) : (
+      <>
+        <img 
+          src={imageUrl} 
+          alt="Media" 
+          className="w-full h-full object-cover filter blur-md" 
+        />
+        <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+          <Lock size={32} className="text-white opacity-70" />
+        </div>
+      </>
+    )}
+  </div>
+)
+
+// Video Post Component
+const VideoPost = ({ 
+  videoSrc, 
+  description, 
+  isLiked, 
+  onToggleLike 
+}: { 
+  videoSrc: string; 
+  description: string; 
+  isLiked: boolean; 
+  onToggleLike: () => void; 
+}) => (
+  <div className="p-4 border rounded-lg shadow-sm bg-white">
+    <div className="flex items-start space-x-3 mb-3">
+      <img
+        src="/WhatsApp Image 2025-06-14 at 02.30.29.jpeg"
+        alt="Profile"
+        className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+      />
+      <div className="flex-1">
+        <div className="flex items-center space-x-1">
+          <span className="font-semibold text-gray-800">Maria Fernanda</span>
+          <BadgeCheck className="text-orange-500" size={16} />
+        </div>
+        <p className="text-sm text-gray-500">@mafe.pessoal</p>
+      </div>
+    </div>
+
+    <p className="text-gray-700 text-sm mb-4">{description}</p>
+
+    <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-900">
+      <video
+        src={videoSrc}
+        className="absolute inset-0 w-full h-full object-cover filter blur-lg opacity-50"
+        loop
+        autoPlay
+        muted
+        playsInline
+      />
+      <video
+        src={videoSrc}
+        className="absolute inset-0 w-full h-full object-contain z-10"
+        loop
+        autoPlay
+        muted
+        playsInline
+      />
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-20">
+        <Lock size={48} className="text-white opacity-70" />
+      </div>
+    </div>
+
+    <div className="flex items-center space-x-4 mt-3 text-gray-500">
+      <button
+        className={`flex items-center space-x-1 ${isLiked ? "text-orange-500" : "text-gray-500"} hover:text-orange-600 transition-colors`}
+        onClick={onToggleLike}
+      >
+        <Heart size={18} fill={isLiked ? "currentColor" : "none"} />
+      </button>
+      <button className="flex items-center space-x-1 hover:text-blue-500">
+        <MessageCircle size={18} />
+      </button>
     </div>
   </div>
 )
@@ -427,15 +513,18 @@ const MainContent = () => {
     setIsLiked2(!isLiked2)
   }
 
-  // Array com todas as novas imagens - todas aparecerão com blur e cadeado
-  const mediaImages = [
-    "/Screenshot_20250614_013933_Telegram.jpg",
-    "/Screenshot_20250614_014926_Gallery.jpg",
-    "/Screenshot_20250614_013958_Telegram.jpg",
-    "/Screenshot_20250614_014509_Gallery.jpg",
-    "/Screenshot_20250614_014749_Gallery.jpg",
-    "/Screenshot_20250614_014543_Gallery.jpg",
-    "/Screenshot_20250614_014812_Gallery.jpg",
+  // Array com todas as novas imagens e vídeos - todas aparecerão com blur e cadeado
+  const mediaItems = [
+    { url: "/Screenshot_20250614_013933_Telegram.jpg", isVideo: false },
+    { url: "/Screenshot_20250614_014926_Gallery.jpg", isVideo: false },
+    { url: "/Screenshot_20250614_013958_Telegram.jpg", isVideo: false },
+    { url: "/Screenshot_20250614_014509_Gallery.jpg", isVideo: false },
+    { url: "/Screenshot_20250614_014749_Gallery.jpg", isVideo: false },
+    { url: "/Screenshot_20250614_014543_Gallery.jpg", isVideo: false },
+    { url: "/Screenshot_20250614_014812_Gallery.jpg", isVideo: false },
+    // Adicione seus vídeos aqui quando você colocar na pasta public/
+    // { url: "/video1.mp4", isVideo: true },
+    // { url: "/video2.mp4", isVideo: true },
   ]
 
   return (
@@ -489,120 +578,21 @@ const MainContent = () => {
       {/* Feed Content */}
       {activeTab === "feed" && (
         <div className="mt-4 space-y-4">
-          {/* Post 1 */}
-          <div className="p-4 border rounded-lg shadow-sm bg-white">
-            <div className="flex items-start space-x-3 mb-3">
-              <img
-                src="/WhatsApp Image 2025-06-14 at 02.30.29.jpeg"
-                alt="Profile"
-                className="w-10 h-10 rounded-full object-cover flex-shrink-0"
-              />
-              <div className="flex-1">
-                <div className="flex items-center space-x-1">
-                  <span className="font-semibold text-gray-800">Maria Fernanda</span>
-                  <BadgeCheck className="text-orange-500" size={16} />
-                </div>
-                <p className="text-sm text-gray-500">@mafe.pessoal</p>
-              </div>
-            </div>
+          {/* Video Post 1 */}
+          <VideoPost
+            videoSrc="/video1.mp4" // Substitua pelo caminho do seu vídeo
+            description="Sim, eu gozei sozinha. Sem ninguém. Só meus dedos… e aquela fantasia suja na cabeça. Gravei tudo. E sim, você vai querer ver. 💦 👉 Tá no link, se tiver coragem"
+            isLiked={isLiked1}
+            onToggleLike={toggleLike1}
+          />
 
-            <p className="text-gray-700 text-sm mb-4">
-              Sim, eu gozei sozinha. Sem ninguém. Só meus dedos… e aquela fantasia suja na cabeça. Gravei tudo. E sim, você vai querer ver. 💦 👉 Tá no link, se tiver coragem
-            </p>
-
-            <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-900">
-              <video
-                src="/new_post_video.mp4"
-                className="absolute inset-0 w-full h-full object-cover filter blur-lg opacity-50"
-                loop
-                autoPlay
-                muted
-                playsInline
-              />
-              <video
-                src="/new_post_video.mp4"
-                className="absolute inset-0 w-full h-full object-contain z-10"
-                loop
-                autoPlay
-                muted
-                playsInline
-              />
-              <div className="absolute inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-20">
-                {" "}
-                <Lock size={48} className="text-white opacity-70" />
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4 mt-3 text-gray-500">
-              <button
-                className={`flex items-center space-x-1 ${isLiked1 ? "text-orange-500" : "text-gray-500"} hover:text-orange-600 transition-colors`}
-                onClick={toggleLike1}
-              >
-                <Heart size={18} fill={isLiked1 ? "currentColor" : "none"} />
-              </button>
-              <button className="flex items-center space-x-1 hover:text-blue-500">
-                <MessageCircle size={18} />
-              </button>
-            </div>
-          </div>
-
-          {/* Post 2 */}
-          <div className="p-4 border rounded-lg shadow-sm bg-white">
-            <div className="flex items-start space-x-3 mb-3">
-              <img
-                src="/WhatsApp Image 2025-06-14 at 02.30.29.jpeg"
-                alt="Profile"
-                className="w-10 h-10 rounded-full object-cover flex-shrink-0"
-              />
-              <div className="flex-1">
-                <div className="flex items-center space-x-1">
-                  <span className="font-semibold text-gray-800">Maria Fernanda</span>
-                  <BadgeCheck className="text-orange-500" size={16} />
-                </div>
-                <p className="text-sm text-gray-500">@mafe.pessoal</p>
-              </div>
-            </div>
-
-            <p className="text-gray-700 text-sm mb-4">
-              Tava escuro… eu tava com tesão… Me toquei até minha perna tremer. Fiz barulho. E filmei tudo. Só pra você me imaginar de novo depois. 🔥
-            </p>
-
-            <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-900">
-              {" "}
-              <video
-                src="/new_post_video_2.mp4"
-                className="absolute inset-0 w-full h-full object-cover filter blur-lg opacity-50"
-                loop
-                autoPlay
-                muted
-                playsInline
-              />
-              <video
-                src="/new_post_video_2.mp4"
-                className="absolute inset-0 w-full h-full object-contain z-10"
-                loop
-                autoPlay
-                muted
-                playsInline
-              />
-              <div className="absolute inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-20">
-                {" "}
-                <Lock size={48} className="text-white opacity-70" />
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4 mt-3 text-gray-500">
-              <button
-                className={`flex items-center space-x-1 ${isLiked2 ? "text-orange-500" : "text-gray-500"} hover:text-orange-600 transition-colors`}
-                onClick={toggleLike2}
-              >
-                <Heart size={18} fill={isLiked2 ? "currentColor" : "none"} />
-              </button>
-              <button className="flex items-center space-x-1 hover:text-blue-500">
-                <MessageCircle size={18} />
-              </button>
-            </div>
-          </div>
+          {/* Video Post 2 */}
+          <VideoPost
+            videoSrc="/video2.mp4" // Substitua pelo caminho do seu vídeo
+            description="Tava escuro… eu tava com tesão… Me toquei até minha perna tremer. Fiz barulho. E filmei tudo. Só pra você me imaginar de novo depois. 🔥"
+            isLiked={isLiked2}
+            onToggleLike={toggleLike2}
+          />
         </div>
       )}
 
@@ -625,8 +615,8 @@ const MainContent = () => {
           </div>
 
           <div className="grid grid-cols-3 gap-1">
-            {mediaImages.map((imageUrl, index) => (
-              <BlurredMedia key={index} imageUrl={imageUrl} />
+            {mediaItems.map((item, index) => (
+              <BlurredMedia key={index} imageUrl={item.url} isVideo={item.isVideo} />
             ))}
           </div>
         </div>
