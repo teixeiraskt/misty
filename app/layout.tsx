@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        {/* UTMify Pixel */}
         <script
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"
           data-utmify-prevent-xcod-sck
@@ -26,6 +27,37 @@ export default function RootLayout({
           async
           defer
         ></script>
+        
+        {/* Back Redirect Script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
+              const link = 'https://meubackredirect.com.br';
+
+              function setBackRedirect(url) {
+                let urlBackRedirect = url;
+                urlBackRedirect = urlBackRedirect =
+                  urlBackRedirect.trim() +
+                  (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+                  document.location.search.replace('?', '').toString();
+
+                history.pushState({}, '', location.href);
+                history.pushState({}, '', location.href);
+                history.pushState({}, '', location.href);
+
+                window.addEventListener('popstate', () => {
+                  console.log('onpopstate', urlBackRedirect);
+                  setTimeout(() => {
+                    location.href = urlBackRedirect;
+                  }, 1);
+                });
+              }
+
+              setBackRedirect(link);
+            `
+          }}
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
