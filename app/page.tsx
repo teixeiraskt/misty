@@ -522,9 +522,9 @@ const MainContent = () => {
     { url: "/Screenshot_20250614_014749_Gallery.jpg", isVideo: false },
     { url: "/Screenshot_20250614_014543_Gallery.jpg", isVideo: false },
     { url: "/Screenshot_20250614_014812_Gallery.jpg", isVideo: false },
-    // Adicione seus vídeos aqui quando você colocar na pasta public/
-    // { url: "/video1.mp4", isVideo: true },
-    // { url: "/video2.mp4", isVideo: true },
+    // Vídeos adicionados
+    { url: "/whatsapp-video-2025-06-14-at-221605_kEJg0H9z.mp4", isVideo: true },
+    { url: "/lv-0-20250614010840_5sL7Ol5L.mp4", isVideo: true },
   ]
 
   return (
@@ -578,17 +578,17 @@ const MainContent = () => {
       {/* Feed Content */}
       {activeTab === "feed" && (
         <div className="mt-4 space-y-4">
-          {/* Video Post 1 */}
+          {/* Video Post 1 - Primeiro vídeo */}
           <VideoPost
-            videoSrc="/video1.mp4" // Substitua pelo caminho do seu vídeo
+            videoSrc="/whatsapp-video-2025-06-14-at-221605_kEJg0H9z.mp4"
             description="Sim, eu gozei sozinha. Sem ninguém. Só meus dedos… e aquela fantasia suja na cabeça. Gravei tudo. E sim, você vai querer ver. 💦 👉 Tá no link, se tiver coragem"
             isLiked={isLiked1}
             onToggleLike={toggleLike1}
           />
 
-          {/* Video Post 2 */}
+          {/* Video Post 2 - Segundo vídeo */}
           <VideoPost
-            videoSrc="/video2.mp4" // Substitua pelo caminho do seu vídeo
+            videoSrc="/lv-0-20250614010840_5sL7Ol5L.mp4"
             description="Tava escuro… eu tava com tesão… Me toquei até minha perna tremer. Fiz barulho. E filmei tudo. Só pra você me imaginar de novo depois. 🔥"
             isLiked={isLiked2}
             onToggleLike={toggleLike2}
