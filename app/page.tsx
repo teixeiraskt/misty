@@ -256,7 +256,7 @@ const VideoPost = ({
       />
       <video
         src={videoSrc}
-        className="absolute inset-0 w-full h-full object-contain z-10"
+        className="absolute inset-0 w-full h-full object-cover z-10"
         loop
         autoPlay
         muted
