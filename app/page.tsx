@@ -513,7 +513,7 @@ const MainContent = () => {
     setIsLiked2(!isLiked2)
   }
 
-  // Array com todas as novas imagens e vídeos - todas aparecerão com blur e cadeado
+  // Array com apenas as fotos - removidos os vídeos
   const mediaItems = [
     { url: "/Screenshot_20250614_013933_Telegram.jpg", isVideo: false },
     { url: "/Screenshot_20250614_014926_Gallery.jpg", isVideo: false },
@@ -522,9 +522,6 @@ const MainContent = () => {
     { url: "/Screenshot_20250614_014749_Gallery.jpg", isVideo: false },
     { url: "/Screenshot_20250614_014543_Gallery.jpg", isVideo: false },
     { url: "/Screenshot_20250614_014812_Gallery.jpg", isVideo: false },
-    // Vídeos adicionados
-    { url: "/whatsapp-video-2025-06-14-at-221605_kEJg0H9z.mp4", isVideo: true },
-    { url: "/lv-0-20250614010840_5sL7Ol5L.mp4", isVideo: true },
   ]
 
   return (
