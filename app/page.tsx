@@ -55,7 +55,7 @@ const ProfileSection = () => {
         {/* Stats overlay */}
         <div className="absolute top-4 left-4 text-white flex flex-col">
           <div className="flex items-center gap-2">
-            <h2 className="text-xl font-semibold">Michele Fernanda</h2>
+            <h2 className="text-xl font-semibold">Maria Fernanda</h2>
           </div>
           <div className="flex gap-6 mt-2 text-center text-white text-xs">
             <div className="flex flex-col items-center">
@@ -109,10 +109,10 @@ const ProfileSection = () => {
       {/* Profile Info */}
       <div className="flex flex-col items-start gap-0.5 mb-1 pl-4">
         <div className="flex items-center gap-2">
-          <h3 className="text-xl font-bold text-gray-600">Michele Fernanda | Nanda</h3>
+          <h3 className="text-xl font-bold text-gray-600">Maria Fernanda | Nanda</h3>
           <BadgeCheck className="text-orange-500" size={20} />
         </div>
-        <p className="text-sm text-gray-600 -mt-0.5">@minanda02</p>
+        <p className="text-sm text-gray-600 -mt-0.5">@mafe.pessoal</p>
       </div>
 
       {/* Bio */}
@@ -142,7 +142,7 @@ const ProfileSection = () => {
       {/* Social Links */}
       <div className="flex items-center gap-2 mb-6 pl-4">
         <a
-          href="https://www.instagram.com/minanda02?igsh=aG9lODdzbjNwcDJi"
+          href="https://www.instagram.com/mafe.pessoal?igsh=aG9lODdzbjNwcDJi"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-3 py-1 border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-100 transition-colors"
@@ -168,7 +168,7 @@ const ProfileSection = () => {
           <span>Instagram</span>
         </a>
         <a
-          href="https://t.me/michenanda01"
+          href="https://t.me/mafe.pessoal"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-3 py-1 border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-100 transition-colors"
@@ -499,10 +499,10 @@ const MainContent = () => {
               />
               <div className="flex-1">
                 <div className="flex items-center space-x-1">
-                  <span className="font-semibold text-gray-800">Michele Fernanda</span>
+                  <span className="font-semibold text-gray-800">Maria Fernanda</span>
                   <BadgeCheck className="text-orange-500" size={16} />
                 </div>
-                <p className="text-sm text-gray-500">@minanda02</p>
+                <p className="text-sm text-gray-500">@mafe.pessoal</p>
               </div>
             </div>
 
@@ -556,10 +556,10 @@ const MainContent = () => {
               />
               <div className="flex-1">
                 <div className="flex items-center space-x-1">
-                  <span className="font-semibold text-gray-800">Michele Fernanda</span>
+                  <span className="font-semibold text-gray-800">Maria Fernanda</span>
                   <BadgeCheck className="text-orange-500" size={16} />
                 </div>
-                <p className="text-sm text-gray-500">@minanda02</p>
+                <p className="text-sm text-gray-500">@mafe.pessoal</p>
               </div>
             </div>
 
@@ -765,7 +765,7 @@ const Footer = () => (
         Termos de Uso
       </a>
     </div>
-    <p className="text-center">© 2025 Michele Fernanda. Todos os direitos reservados.</p>
+    <p className="text-center">© 2025 Maria Fernanda. Todos os direitos reservados.</p>
   </footer>
 )
 

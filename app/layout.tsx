@@ -6,8 +6,8 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Michele Fernanda | Nanda - Conteúdo Exclusivo",
-  description: "Acesso VIP ao conteúdo exclusivo da Michele Fernanda",
+  title: "Maria Fernanda | Nanda - Conteúdo Exclusivo",
+  description: "Acesso VIP ao conteúdo exclusivo da Maria Fernanda",
     generator: 'v0.dev'
 }
 
